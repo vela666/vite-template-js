@@ -1,0 +1,41 @@
+@charset "UTF-8";
+//@import './config/variables.scss';
+@use 'element-plus/theme-chalk/src/message.scss';
+@use 'element-plus/theme-chalk/src/message-box.scss';
+@use "./config/variables.scss" as * ;
+@import './element-ui.scss';
+@import './common.scss';
+@import './standard.scss';
+@import "reset.css";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+span, div, a {
+  outline: none;
+  text-decoration: none;
+}
+
+// 重置所有滚动条
+*, div {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: #f8f8f9;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #dcdee2;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}

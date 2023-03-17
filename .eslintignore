@@ -1,0 +1,15 @@
+# 忽略检查
+node_modules/
+dist
+index.html
+*.sh
+*.md
+*.woff
+*.ttf
+.vscode
+.idea
+/public
+/docs
+.husky
+.local
+/bin

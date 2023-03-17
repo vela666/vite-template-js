@@ -1,0 +1,23 @@
+// 颜色
+$color-fff: #fff !default;
+$color-black: #000 !default;
+$color-primary: #5473e8 !default; // 主色调
+$color-warning: #ff9f24 !default; // 警告
+$color-error: #f56c6c !default; // 错误
+$color-danger: #ff4d4f !default; // 错误
+$color-dedede: #dedede !default;
+$color-1f1f1f: #1f1f1f !default;
+$color-616161: #616161 !default;
+$color-8a8a8a: #8a8a8a !default;
+$border: 1px solid rgba(0, 0, 0, 0.09);
+
+// 圆角
+$radius-4: 4px !default;
+$radius-2: 2px !default;
+// 间宽高
+$spacing-20: 20px;
+$interval-24: 24px !default;
+$interval-36: 36px !default;
+$h-60: 60px !default;
+// 阴影
+$box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
