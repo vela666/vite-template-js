@@ -1,0 +1,121 @@
+{
+  "code": 0,
+  "message": "成功",
+  "data": [
+    {
+      "menu_id": "0da4b12d84e64764ad3a34d297f799063",
+      "type": 0,
+      "menu_name": "首页",
+      "button_name": "",
+      "menu_sort": 10,
+      "menu_icon": "",
+      "menu_path": "/",
+      "is_cache": true,
+      "menu_type": 0,
+      "is_enable": 0,
+      "create_time": "2021-08-06 15:33:03",
+      "children": [
+        {
+          "menu_id": "2b584c315426484fa89a39583ba6e5231",
+          "type": 0,
+          "menu_name": "用户指引",
+          "button_name": "",
+          "menu_sort": 8,
+          "menu_icon": "",
+          "menu_path": "/home/test1/index",
+          "is_cache": true,
+          "menu_type": 0,
+          "is_enable": 0,
+          "create_time": "2022-08-18 22:45:20",
+          "children": []
+        }
+      ]
+    },
+    {
+      "menu_id": "7e4afb951f90413282a34c085922bf317",
+      "type": 0,
+      "menu_name": "资产管理",
+      "button_name": "",
+      "menu_sort": 7,
+      "menu_icon": "",
+      "menu_path": "/asset",
+      "is_cache": true,
+      "menu_type": 0,
+      "is_enable": 0,
+      "create_time": "2021-08-12 16:40:56",
+      "children": [
+        {
+          "menu_id": "bff03ff406384bed80ae2b2252a13d371",
+          "type": 0,
+          "menu_name": "通用资产",
+          "button_name": "",
+          "menu_sort": 5,
+          "menu_icon": "",
+          "menu_path": "/asset/material",
+          "is_cache": true,
+          "menu_type": 0,
+          "is_enable": 0,
+          "create_time": "2021-09-27 10:42:40",
+          "children": [
+            {
+              "menu_id": "beb443b940314cb592b188e6894fa8e03",
+              "type": 0,
+              "menu_name": "视频管理",
+              "button_name": "",
+              "menu_sort": 3,
+              "menu_icon": "",
+              "menu_path": "/asset/material/video",
+              "is_cache": true,
+              "menu_type": 0,
+              "is_enable": 0,
+              "create_time": "2021-09-27 10:42:40",
+              "children": []
+            },
+            {
+              "menu_id": "84f15e8a659e48f78d88b197cbb676397",
+              "type": 0,
+              "menu_name": "图片管理",
+              "button_name": "",
+              "menu_sort": 2,
+              "menu_icon": "",
+              "menu_path": "/asset/material/image",
+              "is_cache": true,
+              "menu_type": 0,
+              "is_enable": 0,
+              "create_time": "2021-09-27 10:42:40",
+              "children": []
+            },
+            {
+              "menu_id": "b255c75e643645eea88d11f76430bf943",
+              "type": 0,
+              "menu_name": "文案管理",
+              "button_name": "",
+              "menu_sort": 1,
+              "menu_icon": "",
+              "menu_path": "/asset/material/copywriting",
+              "is_cache": true,
+              "menu_type": 0,
+              "is_enable": 0,
+              "create_time": "2021-09-27 10:42:40",
+              "children": []
+            },
+            {
+              "menu_id": "13c6165d4c314ad48725022e09161c8b6",
+              "type": 0,
+              "menu_name": "创意标签",
+              "button_name": "",
+              "menu_sort": 1,
+              "menu_icon": "",
+              "menu_path": "/asset/material/creative-label",
+              "is_cache": false,
+              "menu_type": 1,
+              "is_enable": 0,
+              "create_time": "2022-01-06 17:14:29",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

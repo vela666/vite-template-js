@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "esnext",
+    "module": "esnext",
+    // 解析非相关模块名称的基础目录
+    "baseUrl": "./",
+    // "skipLibCheck": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "removeComments": true,
+    // 解决prettier对于装饰器语法的警告
+    // "experimentalDecorators": true,
+    // 解决.jsx文件无法快速跳转的问题
+    "jsx": "preserve",
+    "paths": {
+      "@": [
+        "src/"
+      ],
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "WebWorker",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    // "noImplicitAny": false,
+  },
+  // 排除的文件
+  "exclude": ["node_modules", "dist", "build"]
+}

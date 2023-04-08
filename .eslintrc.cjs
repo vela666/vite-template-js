@@ -19,5 +19,8 @@ module.exports = {
   rules: {
     'no-var': 'error',
     'no-unused-vars': 'warn',
+    "vue/multi-word-component-names":"off",
+    // vue组件name强制使用驼峰命名
+    // "vue/name-property-casing": ['error', "PascalCase"],
   },
 }
