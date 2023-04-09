@@ -3,7 +3,7 @@
     <ul class="nav">
       <li v-for="item1 of asyncRoutes" :key="item1.menu_id" class="nav-item">
         <router-link
-          v-if="[0, 1].includes(item1.children?.length)"
+          v-if="item1.children?.length === 0"
           :class="{
             'router-link-active': item1.menu_id === $route.meta.parentId[0],
           }"
@@ -71,22 +71,23 @@
       </li>
     </ul>
   </nav>
-  <!--  <el-breadcrumb v-if="breadcrumbList.length" class="layout-menu-breadcrumb">
+  <el-breadcrumb v-if="breadcrumbList.length" class="layout-menu-breadcrumb">
     <el-breadcrumb-item v-for="item in breadcrumbList" :key="item.menu_id">{{
       item.menu_name
     }}</el-breadcrumb-item>
-  </el-breadcrumb>-->
+  </el-breadcrumb>
 </template>
 
 <script setup name="LayoutHeaderNav">
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import usePermissionStore from '@/stores/modules/permission'
 import { storeToRefs } from 'pinia'
+
 const route = useRoute()
+const router = useRouter()
 const store = usePermissionStore()
 const { asyncRoutes } = storeToRefs(store)
-console.log(asyncRoutes.value)
 /*// 再次输入密码验证
 let verifyPwd = (rule, value, callback) => {
   if (value === '') {
@@ -141,19 +142,24 @@ const validatePass2 = (rule, value, callback) => {
 
   state.updFormRef.validateField('new_password')
   callback()
-}*/
-/**
+}
+/!**
  * @description 获取菜单容器宽度
  * @author fengjin
  * @date 2022-06-08 12:11:35
- */
-/*const getMenuWidth = (menus) => {
+ *!/
+const getMenuWidth = (menus) => {
   const _menus = menus.filter((item) => !item.hidden)
   const column = Math.ceil(_menus.length / 7)
   let length = 0
 
   for (let i = 0; i < column; i++) {
-    length += Math.max(..._menus.slice(i * 7, (i + 1) * 7).map((item) => item.menu_name.length)) + 2
+    length +=
+      Math.max(
+        ..._menus
+          .slice(i * 7, (i + 1) * 7)
+          .map((item) => item.menu_name.length),
+      ) + 2
   }
 
   return `${length}em`

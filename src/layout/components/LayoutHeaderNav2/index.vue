@@ -16,12 +16,9 @@
 </template>
 
 <script setup name="LayoutHeaderNav">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import usePermissionStore from '@/stores/modules/permission'
 import { storeToRefs } from 'pinia'
 
-const route = useRoute()
 const store = usePermissionStore()
 const { asyncRoutes } = storeToRefs(store)
 // 再次输入密码验证

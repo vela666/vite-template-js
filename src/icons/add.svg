@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="组_103" data-name="组 103" transform="translate(0.2 0.518)">
+    <path id="c" class="cls-1" d="M8,1a7,7,0,1,0,7,7A7.008,7.008,0,0,0,8,1M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0Z" transform="translate(-0.2 -0.518)"/>
+    <path id="b" class="cls-1" d="M0,8.082a.5.5,0,0,1-.5-.5V0A.5.5,0,0,1,0-.5.5.5,0,0,1,.5,0V7.582A.5.5,0,0,1,0,8.082Z" transform="translate(7.8 3.524)"/>
+    <path id="a" class="cls-1" d="M0,8.082a.5.5,0,0,1-.5-.5V0A.5.5,0,0,1,0-.5.5.5,0,0,1,.5,0V7.582A.5.5,0,0,1,0,8.082Z" transform="translate(11.591 7.315) rotate(90)"/>
+  </g>
+</svg>

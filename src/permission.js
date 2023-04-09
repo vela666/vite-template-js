@@ -47,6 +47,7 @@ router.beforeEach(async (to) => {
     await store.getMenus()
     // console.log(store.generateRoutes, 'store.generateRoutes')
     store.generateRoutes.forEach((route) => {
+      console.log(route.name, route)
       router.addRoute(route.name, route)
     })
     router.addRoute({

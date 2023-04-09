@@ -1,3 +1,20 @@
+@mixin pageSection() {
+  background-color: $color-fff;
+  box-shadow: $box-shadow-base;
+  border-radius: $border-radius-base;
+}
+
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin no-select() {
+  user-select: none;
+}
+
+
 // 颜色
 $color-fff: #fff !default;
 $color-black: #000 !default;
@@ -21,3 +38,27 @@ $interval-36: 36px !default;
 $h-60: 60px !default;
 // 阴影
 $box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
+
+$sideBarWidth: 210px;
+$menuBg: #304156;
+$menuHover: #263445;
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$border-color-base: #dedede !default;
+$border-base: 1px solid rgba(0, 0, 0, 0.09);
+$border-bottom-color: #f2f2f2;
+
+// 圆角
+$border-radius-base: 4px !default;
+$border-radius-small: 2px !default;
+
+// 阴影
+$box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
+// h1~h3
+$h1-text-color: #1f1f1f !default; // 主标题颜色
+$h2-text-color: #616161 !default; // 二级标题颜色
+$h3-text-color: #8a8a8a !default; // 三级标题颜色
