@@ -39,3 +39,33 @@ span, div, a {
     background: rgba(0, 0, 0, 0.4);
   }
 }
+
+.n-open-menu {
+  .sidebar-container {
+    width: $navbar-no-collapse;
+  }
+
+  .layout-container {
+    margin-left: $navbar-no-collapse;
+  }
+}
+
+.n-fold-menu {
+ /* .n-el-menu-vertical {
+    .el-sub-menu__title,
+    .el-menu-item {
+      & * {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+    }
+  }*/
+  .sidebar-container {
+    width: $navbar-collapse;
+  }
+
+  .layout-container {
+    margin-left: $navbar-collapse;
+  }
+}
