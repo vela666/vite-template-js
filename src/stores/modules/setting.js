@@ -14,7 +14,11 @@ export default defineStore('counter', () => {
   const state = reactive({
     isCollapse: false,
   })
+  const toggleCollapseOrExpand = () => {
+    state.isCollapse = !state.isCollapse
+  }
   return {
     ...toRefs(state),
+    toggleCollapseOrExpand,
   }
 })

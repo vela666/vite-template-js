@@ -1,7 +1,7 @@
 <template>
   <div
-    class="app-wrapper"
-    :class="settingStore.isCollapse ? 'n-fold-menu' : 'n-open-menu'">
+    :class="settingStore.isCollapse ? 'n-fold-menu' : 'n-open-menu'"
+    class="app-wrapper">
     <LayoutHeader />
     <LayoutContainer />
   </div>
@@ -15,12 +15,7 @@ const settingStore = useSetting()
 </script>
 <style lang="scss" scoped>
 .app-wrapper {
-  //display: flex;
-  //flex-wrap: nowrap;
   height: 100%;
   width: 100%;
-  // 第一种布布局时停用下面样式
-  //display: grid;
-  //grid-template-columns: auto 1fr;
 }
 </style>

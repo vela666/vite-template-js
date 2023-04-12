@@ -20,6 +20,6 @@ import LayoutHeaderNav3 from '../LayoutHeaderNav3'
   //flex-shrink: 0;
   // 第一种时布局停用
   height: 100%;
-  background-color: $menuBg;
+  background-color: $color-304156;
 }
 </style>

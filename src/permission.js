@@ -37,7 +37,7 @@ router.beforeEach(async (to) => {
         return true
       }
       /*else {
-         // 路由中没有添加404 且用户进入的路由不存在时
+         // 路由中没有添加404时 且用户进入的路由不存在时
         // 如果路由不存在，则根据路径向上一级跳转，直到找到存在的路由
         return to.path.replace('/' + to.path.split('/').pop(), '')
         // next(to.path.replace('/' + to.path.split('/').pop(), ''))
@@ -45,35 +45,35 @@ router.beforeEach(async (to) => {
     }
   } else {
     await store.getMenus()
-    // console.log(store.generateRoutes, 'store.generateRoutes')
-    store.generateRoutes.forEach((route) => {
-      console.log(route.name, route)
-      router.addRoute(route.name, route)
-    })
-    router.addRoute({
-      path: '/:pathMatch(.*)*',
-      name: 'NotFound',
-      component: () => import('@/views/404'),
-    })
-    /* // 这个方式需要使用hash模式 不然404页面进不去
-    const pathList = getPathList(store.generateRoutes)
-    // 如果不包含直接跳转路由数组里的第一个
-    if (!pathList.includes(to.path)) {
-      // to.path = pathList[0]
-      console.log(pathList)
-      return {
-        ...to,
-        path: pathList[0],
-        replace: true,
-      }
-    } else {
-      return { ...to, replace: true }
-    }*/
-    router.addRoute({
-      path: '/',
-      name: 'Index',
-      redirect: store.generateRoutes[0].path,
-    })
+    if (store.generateRoutes.length > 0) {
+      store.generateRoutes.forEach((route) => {
+        router.addRoute(route.name, route)
+      })
+      /* router.addRoute({
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('@/views/404'),
+      })*/
+      /* // 这个方式需要使用hash模式 不然404页面进不去
+      const pathList = getPathList(store.generateRoutes)
+      // 如果不包含直接跳转路由数组里的第一个
+      if (!pathList.includes(to.path)) {
+        // to.path = pathList[0]
+        console.log(pathList)
+        return {
+          ...to,
+          path: pathList[0],
+          replace: true,
+        }
+      } else {
+        return { ...to, replace: true }
+      }*/
+      router.addRoute({
+        path: '/',
+        name: 'Index',
+        redirect: store.generateRoutes[0].path,
+      })
+    }
     return { ...to, replace: true }
     // return to.fullPath
   }

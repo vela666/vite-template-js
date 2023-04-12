@@ -42,11 +42,11 @@ span, div, a {
 
 .n-open-menu {
   .sidebar-container {
-    width: $navbar-no-collapse;
+    width: $w-210;
   }
 
   .layout-container {
-    margin-left: $navbar-no-collapse;
+    margin-left: $w-210;
   }
 }
 
@@ -62,10 +62,10 @@ span, div, a {
     }
   }*/
   .sidebar-container {
-    width: $navbar-collapse;
+    width: $w-64;
   }
 
   .layout-container {
-    margin-left: $navbar-collapse;
+    margin-left: $w-64;
   }
 }

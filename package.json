@@ -18,6 +18,7 @@
     "lodash-es": "^4.17.21",
     "nprogress": "^0.2.0",
     "path-browserify": "^1.0.1",
+    "path-to-regexp": "^6.2.1",
     "pinia": "^2.0.34",
     "reset.css": "^2.0.2",
     "vite-plugin-svg-icons": "^2.0.1",

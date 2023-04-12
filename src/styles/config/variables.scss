@@ -26,11 +26,14 @@ $color-dedede: #dedede !default;
 $color-1f1f1f: #1f1f1f !default;
 $color-616161: #616161 !default;
 $color-8a8a8a: #8a8a8a !default;
-$border: 1px solid rgba(0, 0, 0, 0.09);
+$color-304156: #304156 !default;
+$color-263445: #263445 !default;
+$color-1f2d3d: #1f2d3d !default;
+$color-001528: #001528 !default;
 
-$navbar-no-collapse: 210px;
-$navbar-collapse: 64px;
-
+$w-210: 210px;
+$w-64: 64px;
+$time-dot-3: 0.3s;
 // 圆角
 $radius-4: 4px !default;
 $radius-2: 2px !default;
@@ -41,15 +44,6 @@ $interval-36: 36px !default;
 $h-60: 60px !default;
 // 阴影
 $box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
-
-$sideBarWidth: 210px;
-$menuBg: #304156;
-$menuHover: #263445;
-$menuText: #bfcbd9;
-$menuActiveText: #409eff;
-$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
-$subMenuBg: #1f2d3d;
-$subMenuHover: #001528;
 
 $border-color-base: #dedede !default;
 $border-base: 1px solid rgba(0, 0, 0, 0.09);

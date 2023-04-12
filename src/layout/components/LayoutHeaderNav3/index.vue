@@ -1,8 +1,5 @@
 <template>
   <div class="sidebar-container">
-    <el-button @click="settingStore.isCollapse = !settingStore.isCollapse"
-      >测试</el-button
-    >
     <el-scrollbar always wrap-class="scrollbar-wrapper">
       <el-menu
         :collapse-transition="false"
@@ -33,20 +30,18 @@ import SidebarItem from './SidebarItem'
 const route = useRoute()
 const store = usePermissionStore()
 const settingStore = useSetting()
-console.log(settingStore)
 const { asyncRoutes } = storeToRefs(store)
 </script>
 
 <style lang="scss">
 .sidebar-container {
-  //transition: width 0.28s;
-  background-color: #304156;
+  transition: width $time-dot-3;
+  background-color: $color-304156;
   height: 100%;
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  z-index: 9999999999;
+  z-index: 99999999;
   overflow: hidden;
   .is-horizontal {
     display: none;
@@ -95,16 +90,16 @@ const { asyncRoutes } = storeToRefs(store)
   // menu hover
   .el-sub-menu__title {
     &:hover {
-      background-color: $menuHover !important;
+      background-color: $color-263445 !important;
     }
   }
 
   & .nest-menu .el-sub-menu > .el-sub-menu__title,
   & .el-sub-menu .el-menu-item {
-    background-color: $subMenuBg !important;
+    background-color: $color-1f2d3d !important;
 
     &:hover {
-      background-color: $subMenuHover !important;
+      background-color: $color-001528 !important;
     }
   }
 }

@@ -1,11 +1,14 @@
 <template>
-  <div>
-    <el-button v-loading="loading" @click="test">as111111111111</el-button>
-    <el-button @click="modify">a2</el-button>
-    <p v-for="item of 1000" :key="item" class="a">
-      红红火火恍恍惚惚或或或或或或或或或或或或或或或
-    </p>
-  </div>
+  <!--  <div class="demo">
+    <p class="name">{{ name }}</p>
+    <button @click="modify">修改</button>
+  </div>-->
+  <router-view />
+  <el-button v-loading="loading" @click="test">as111111111111</el-button>
+  <el-button @click="modify">a2</el-button>
+  <p v-for="item of 1000" :key="item" class="a">
+    红红火火恍恍惚惚或或或或或或或或或或或或或或或
+  </p>
 </template>
 <script setup name="Test1">
 import { ref, nextTick } from 'vue'

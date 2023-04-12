@@ -141,4 +141,23 @@ export default [
       },
     ],
   },*/
+  {
+    path: '/401',
+    hidden: true,
+    name: 'Exception401',
+    meta: {
+      title: '401 Unauthorized',
+    },
+    component: () => import('@/views/exception/401'),
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    // name: 'Exception404',
+    hidden: true,
+    meta: {
+      title: '404 Not Found',
+    },
+    // 不要写name不然动态路由一直在404页面
+    component: () => import('@/views/exception/404'),
+  },
 ]
