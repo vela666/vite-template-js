@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { reactive, toRefs, watch, nextTick, computed } from 'vue'
+import { reactive, toRefs } from 'vue'
 /*export const useCounterStore = defineStore('counter', () => {
   const count = ref(0)
   const doubleCount = computed(() => count.value * 2)

@@ -28,7 +28,7 @@ const fixedHeader = true
 .fixed-header {
   position: sticky;
   top: 0;
-  z-index: 99999998;
+  z-index: 1002;
   transition: width $time-dot-3;
 }
 .layout-container {

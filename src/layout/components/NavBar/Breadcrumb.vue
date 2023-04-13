@@ -16,8 +16,9 @@
 <script setup name="Breadcrumb">
 import { computed, watch, reactive, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { pathToRegexp } from 'path-to-regexp'
+import { compile } from 'path-to-regexp'
 import usePermissionStore from '@/stores/modules/permission'
+
 const store = usePermissionStore()
 const route = useRoute()
 const router = useRouter()
@@ -27,30 +28,55 @@ const getBreadcrumb = () => {
   // only show routes with meta.title
   const menu = store.generateRoutes.find((item) => item.path === '/')
   let matched = route.matched.filter((item) => item.meta && item.meta.title)
-  if (menu.children.length === 1) {
+  /*if (menu.children.length === 1) {
     matched = [{ ...menu.children[0], redirect: menu.redirect }, ...matched]
-  }
+  }*/
   const first = matched[0]
-  console.log({ first, a: route.matched, matched })
+  // console.log({ first, a: route.matched, matched })
   levelList.value = matched.filter(
     // (item) => item.meta && item.meta.title && item.meta.breadcrumb !== false,
     (item) => item.meta && item.meta.title,
   )
 }
-
+const isDashboard = (route) => {
+  const { name, path } = route
+  if (!name) {
+    return false
+  }
+  return name.trim().toLocaleLowerCase() === 'Dashboard'.toLocaleLowerCase()
+}
+const getBreadcrumb1 = () => {
+  // only show routes with meta.title
+  let matched = route.matched.filter((item) => item.meta && item.meta.title)
+  const first = matched[0]
+  if (!isDashboard(first)) {
+    matched = [{ path: '/dashboard', meta: { title: 'Dashboard' } }].concat(
+      matched,
+    )
+  }
+  console.log(
+    matched.filter(
+      (item) => item.meta && item.meta.title && item.meta.breadcrumb !== false,
+    ),
+  )
+  /* this.levelList = matched.filter(
+    (item) => item.meta && item.meta.title && item.meta.breadcrumb !== false,
+  )*/
+}
+getBreadcrumb1()
 const pathCompile = (path) => {
   // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
   const { params } = route
-  const toPath = pathToRegexp.compile(path)
+  const toPath = compile(path)
   return toPath(params)
 }
 const handleLink = (item) => {
   const { redirect, path } = item
   if (redirect) {
-    router.push(redirect)
+    router.replace(redirect)
     return
   }
-  router.push(pathCompile(path))
+  router.replace(pathCompile(path))
 }
 watch(route, (val) => {
   getBreadcrumb()

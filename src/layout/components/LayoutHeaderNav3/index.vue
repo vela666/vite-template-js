@@ -1,4 +1,19 @@
 <template>
+  <!--  <el-menu
+    :collapse-transition="false"
+    :default-active="route.path"
+    :collapse="settingStore.isCollapse"
+    class="n-el-menu-vertical scrollbar-wrapper"
+    background-color="#304156"
+    text-color="#bfcbd9"
+    mode="horizontal"
+    active-text-color="#f4f4f5">
+    <SidebarItem
+      v-for="route of asyncRoutes"
+      :key="route.menu_path"
+      :item="route"
+      :base-path="route.menu_path" />
+  </el-menu>-->
   <div class="sidebar-container">
     <el-scrollbar always wrap-class="scrollbar-wrapper">
       <el-menu
@@ -41,7 +56,7 @@ const { asyncRoutes } = storeToRefs(store)
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999999;
+  z-index: 1001;
   overflow: hidden;
   .is-horizontal {
     display: none;
@@ -51,6 +66,8 @@ const { asyncRoutes } = storeToRefs(store)
   overflow-x: hidden !important;
   height: 100%;
   .router-link-active {
+    color: $color-primary;
+
     > * {
       color: $color-primary;
     }

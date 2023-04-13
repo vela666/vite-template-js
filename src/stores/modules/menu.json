@@ -44,7 +44,6 @@
       "is_enable": 0,
       "create_time": "2021-08-12 16:40:56",
       "children": [
-
         {
           "menu_id": "table4",
           "type": 0,
@@ -53,6 +52,19 @@
           "menu_sort": 5,
           "menu_icon": "",
           "menu_path": "/table/Merge4/index",
+          "is_cache": true,
+          "menu_type": 0,
+          "is_enable": 0,
+          "create_time": "2021-09-27 10:42:40"
+        },
+        {
+          "menu_id": "table5",
+          "type": 0,
+          "menu_name": "合并1",
+          "button_name": "",
+          "menu_sort": 5,
+          "menu_icon": "",
+          "menu_path": "/table/Merge1/index",
           "is_cache": true,
           "menu_type": 0,
           "is_enable": 0,
