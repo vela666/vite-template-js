@@ -9,6 +9,7 @@ const defaultPath = '../../views/'
 // 过滤4开头的文件
 const dynamicRoutesModules = import.meta.glob('../../views/**/!(4).vue')
 // /path/example => PathExample
+console.log(dynamicRoutesModules)
 function formatRouteName(str) {
   return str
     .replace('/', '')

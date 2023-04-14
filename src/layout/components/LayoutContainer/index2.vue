@@ -5,12 +5,6 @@
         <component :is="Component" :key="route.path" />
       </keep-alive>
     </router-view>
-    <!--    <router-view #default="{ Component, route }">
-         <keep-alive v-if="$route.meta.keepAlive">
-           <component :is="Component" :key="route.path" />
-         </keep-alive>
-         <component :is="Component" v-else :key="route.path" />
-       </router-view>-->
   </section>
 </template>
 <!--(Nav1和2布局用的) -->

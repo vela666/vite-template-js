@@ -100,16 +100,16 @@ const { asyncRoutes } = storeToRefs(store)
 }
 .layout-header-menu {
   overflow: hidden;
-  margin: $interval-24 $interval-36 0;
+  margin: $size-24 $size-36 0;
   background-color: $color-fff;
   box-shadow: $box-shadow-base;
-  border-radius: $radius-4;
+  border-radius: $size-4;
   font-size: 14px;
 
   > .menu {
     display: flex;
-    height: $h-60;
-    line-height: $h-60;
+    height: $size-60;
+    line-height: $size-60;
 
     .menu-link {
       display: block;
@@ -131,7 +131,7 @@ const { asyncRoutes } = storeToRefs(store)
   > .submenu {
     display: flex;
     flex-wrap: wrap;
-    padding: 15px $spacing-20 0;
+    padding: 15px $size-20 0;
     line-height: 30px;
     border-top: 1px solid $color-dedede;
 
@@ -145,7 +145,7 @@ const { asyncRoutes } = storeToRefs(store)
       padding-left: 35px;
       height: 30px;
       border: 1px solid transparent;
-      border-radius: $radius-2;
+      border-radius: $size-2;
       color: $color-616161;
 
       &:hover {

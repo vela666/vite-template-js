@@ -3,20 +3,16 @@
     <div :class="{ 'fixed-header': fixedHeader }">
       <NavBar />
     </div>
-    <!--    <router-view #default="{ Component, route }">
-           <keep-alive v-if="$route.meta.keepAlive">
-             <component :is="Component" :key="route.path" />
-           </keep-alive>
-           <component :is="Component" v-else :key="route.path" />
-         </router-view>-->
     <div class="layout-container-content">
       <el-scrollbar always class="layout-container-content-scroll">
         <div class="p20">
-          <router-view #default="{ Component, route }">
-            <keep-alive :max="2">
-              <component :is="Component" :key="route.path" />
-            </keep-alive>
-          </router-view>
+          <transition appear name="fade-transform" mode="out-in">
+            <router-view #default="{ Component, route }">
+              <keep-alive :max="2">
+                <component :is="Component" :key="route.path" />
+              </keep-alive>
+            </router-view>
+          </transition>
         </div>
       </el-scrollbar>
     </div>
@@ -40,7 +36,7 @@ const fixedHeader = true
   min-height: 100%;
   transition: margin-left $time-dot-3;
   .layout-container-content {
-    //padding: $spacing-20;
+    //padding: $size-20;
     position: relative;
     width: 100%;
     background: #f0f2f5;

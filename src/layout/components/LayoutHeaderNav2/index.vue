@@ -174,10 +174,10 @@ const navList = computed(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: $interval-36;
-  padding-left: $interval-36;
-  height: $h-60;
-  line-height: $h-60;
+  padding-right: $size-36;
+  padding-left: $size-36;
+  height: $size-60;
+  line-height: $size-60;
   background-color: #fff;
   box-shadow: $box-shadow-base;
 
@@ -212,7 +212,7 @@ const navList = computed(() => {
           width: 36px;
           height: 4px;
           background-color: $color-primary;
-          border-radius: $radius-2;
+          border-radius: $size-2;
           content: '';
         }
       }

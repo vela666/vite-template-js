@@ -6,6 +6,7 @@
 @import './element-ui.scss';
 @import './common.scss';
 @import './standard.scss';
+@import './transition.scss';
 @import "reset.css";
 
 html {
@@ -42,11 +43,11 @@ span, div, a {
 
 .n-open-menu {
   .sidebar-container {
-    width: $w-210;
+    width: $size-210;
   }
 
   .layout-container {
-    margin-left: $w-210;
+    margin-left: $size-210;
   }
 }
 
@@ -62,10 +63,10 @@ span, div, a {
     }
   }*/
   .sidebar-container {
-    width: $w-64;
+    width: $size-64;
   }
 
   .layout-container {
-    margin-left: $w-64;
+    margin-left: $size-64;
   }
 }

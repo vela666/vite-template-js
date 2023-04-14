@@ -1,7 +1,7 @@
 @mixin pageSection() {
   background-color: $color-fff;
   box-shadow: $box-shadow-base;
-  border-radius: $border-radius-base;
+  border-radius: $size-4;
 }
 
 @mixin text-truncate() {
@@ -13,7 +13,6 @@
 @mixin no-select() {
   user-select: none;
 }
-
 
 // 颜色
 $color-fff: #fff !default;
@@ -31,31 +30,19 @@ $color-263445: #263445 !default;
 $color-1f2d3d: #1f2d3d !default;
 $color-001528: #001528 !default;
 
-$w-210: 210px;
-$w-64: 64px;
+
+$size-2: 2px !default;
+$size-4: 4px !default;
+$size-14: 14px !default;
+$size-20: 20px !default;
+$size-24: 24px !default;
+$size-36: 36px !default;
+$size-40: 40px !default;
+$size-60: 60px !default;
+$size-64: 64px !default;
+$size-210: 210px !default;
+
 $time-dot-3: 0.3s;
-// 圆角
-$radius-4: 4px !default;
-$radius-2: 2px !default;
-// 间宽高
-$spacing-20: 20px;
-$interval-24: 24px !default;
-$interval-36: 36px !default;
-$h-60: 60px !default;
-// 阴影
-$box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
-
-$border-color-base: #dedede !default;
-$border-base: 1px solid rgba(0, 0, 0, 0.09);
-$border-bottom-color: #f2f2f2;
-
-// 圆角
-$border-radius-base: 4px !default;
-$border-radius-small: 2px !default;
 
 // 阴影
 $box-shadow-base: 0px 0px 6px 0px rgba(28, 39, 80, 0.16) !default;
-// h1~h3
-$h1-text-color: #1f1f1f !default; // 主标题颜色
-$h2-text-color: #616161 !default; // 二级标题颜色
-$h3-text-color: #8a8a8a !default; // 三级标题颜色

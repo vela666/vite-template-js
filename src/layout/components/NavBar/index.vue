@@ -42,13 +42,13 @@ import Breadcrumb from './Breadcrumb'
 .navbar {
   display: flex;
   align-items: center;
-  gap: $spacing-20;
+  gap: $size-20;
   height: 50px;
   overflow: hidden;
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-  padding: 0 $spacing-20;
+  padding: 0 $size-20;
   .hamburger-container {
     line-height: 46px;
     height: 100%;
