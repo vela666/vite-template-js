@@ -10,17 +10,22 @@
            <component :is="Component" v-else :key="route.path" />
          </router-view>-->
     <div class="layout-container-content">
-      <router-view #default="{ Component, route }">
-        <keep-alive :max="2">
-          <component :is="Component" :key="route.path" />
-        </keep-alive>
-      </router-view>
+      <el-scrollbar always class="layout-container-content-scroll">
+        <div class="p20">
+          <router-view #default="{ Component, route }">
+            <keep-alive :max="2">
+              <component :is="Component" :key="route.path" />
+            </keep-alive>
+          </router-view>
+        </div>
+      </el-scrollbar>
     </div>
   </section>
 </template>
 
 <script setup name="LayoutContainer">
 import NavBar from '@/layout/components/NavBar'
+import SidebarItem from '@/layout/components/LayoutHeaderNav3/SidebarItem.vue'
 const fixedHeader = true
 </script>
 
@@ -28,17 +33,21 @@ const fixedHeader = true
 .fixed-header {
   position: sticky;
   top: 0;
-  z-index: 1002;
-  transition: width $time-dot-3;
+  z-index: 9;
 }
 .layout-container {
   position: relative;
   min-height: 100%;
   transition: margin-left $time-dot-3;
   .layout-container-content {
-    padding: $spacing-20;
+    //padding: $spacing-20;
     position: relative;
+    width: 100%;
+    background: #f0f2f5;
     overflow: hidden;
+    &-scroll {
+      height: calc(100vh - 50px);
+    }
   }
 }
 </style>

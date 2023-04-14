@@ -2,8 +2,10 @@
   <div
     :class="settingStore.isCollapse ? 'n-fold-menu' : 'n-open-menu'"
     class="app-wrapper">
-    <LayoutHeader />
-    <LayoutContainer />
+    <div>
+      <LayoutHeader />
+      <LayoutContainer />
+    </div>
   </div>
 </template>
 
@@ -15,6 +17,7 @@ const settingStore = useSetting()
 </script>
 <style lang="scss" scoped>
 .app-wrapper {
+  position: relative;
   height: 100%;
   width: 100%;
 }
