@@ -4,17 +4,19 @@
       <NavBar />
     </div>
     <div class="layout-container-content">
-      <el-scrollbar always class="layout-container-content-scroll">
-        <div class="p20">
-          <transition appear name="fade-transform" mode="out-in">
+      <div>
+        <el-scrollbar always class="layout-container-content-scroll">
+          <div class="p20">
             <router-view #default="{ Component, route }">
-              <keep-alive :max="2">
-                <component :is="Component" :key="route.path" />
-              </keep-alive>
+              <transition appear name="fade-transform" mode="out-in">
+                <keep-alive :max="2">
+                  <component :is="Component" :key="route.path" />
+                </keep-alive>
+              </transition>
             </router-view>
-          </transition>
-        </div>
-      </el-scrollbar>
+          </div>
+        </el-scrollbar>
+      </div>
     </div>
   </section>
 </template>
