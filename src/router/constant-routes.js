@@ -152,12 +152,12 @@ export default [
   },
   {
     path: '/:pathMatch(.*)*',
+    // 不要写name不然动态路由一直在404页面
     // name: 'Exception404',
     hidden: true,
     meta: {
       title: '404 Not Found',
     },
-    // 不要写name不然动态路由一直在404页面
     component: () => import('@/views/exception/404'),
   },
 ]
