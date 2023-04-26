@@ -55,7 +55,50 @@
           "is_cache": true,
           "menu_type": 0,
           "is_enable": 0,
-          "create_time": "2021-09-27 10:42:40"
+          "create_time": "2021-09-27 10:42:40",
+          "children": [
+            {
+              "menu_id": "测试1",
+              "type": 0,
+              "menu_name": "测试1",
+              "button_name": "",
+              "menu_sort": 5,
+              "menu_icon": "",
+              "menu_path": "/table/Merge1/test1/index",
+              "is_cache": true,
+              "menu_type": 0,
+              "is_enable": 0,
+              "create_time": "2021-09-27 10:42:40",
+              "children": [
+                {
+                  "menu_id": "测试2",
+                  "type": 0,
+                  "menu_name": "测试2",
+                  "button_name": "",
+                  "menu_sort": 5,
+                  "menu_icon": "",
+                  "menu_path": "/table/Merge1/test2/index",
+                  "is_cache": true,
+                  "menu_type": 0,
+                  "is_enable": 0,
+                  "create_time": "2021-09-27 10:42:40"
+                },
+                {
+                  "menu_id": "测试3",
+                  "type": 0,
+                  "menu_name": "测试3",
+                  "button_name": "",
+                  "menu_sort": 5,
+                  "menu_icon": "",
+                  "menu_path": "/table/Merge1/test3/index",
+                  "is_cache": true,
+                  "menu_type": 0,
+                  "is_enable": 0,
+                  "create_time": "2021-09-27 10:42:40"
+                }
+              ]
+            }
+          ]
         },
         {
           "menu_id": "table4",

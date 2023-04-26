@@ -42,8 +42,15 @@ function generatorDynamicRoutes(menus = [], isOneLevel = false) {
       },
       component: null,
     }
+    // 去除路径前面和后面的 /
+    const comp = item.menu_path.replace(/^\/+|\/+$/g, '')
     if (item.children && item.children.length > 0) {
-      route.component = Layout
+      // 除了父级 子级如果还包含子级 那么这层component也是layout 如果不想这样 就用下面的方式
+      // route.component = Layout
+      // 只有第一层组件才是 Layout 其他都是自己本身
+      route.component = !isOneLevel
+        ? Layout
+        : dynamicRoutesModules[`${defaultPath}${comp}.vue`]
 
       route.redirect = item.children[0].menu_path
 
@@ -62,8 +69,6 @@ function generatorDynamicRoutes(menus = [], isOneLevel = false) {
     } else {
       // 去除第一个 /  /home/test2/ = home/test2/
       // const comp = item.menu_path.replace(/\//, '')
-      // 去除前面和后面的 /
-      const comp = item.menu_path.replace(/^\/+|\/+$/g, '')
       if (item.parentId) route.meta.parentId.push(...item.parentId)
       // comp 路由文件目录位置
       // '../../views/b/index.vue'.match(/[^/]*\.vue$/) 获取文件名index.vue
@@ -95,7 +100,6 @@ export default defineStore('permission', () => {
   }
 
   const generateRoutes = computed(() => {
-    console.log()
     return [...generatorDynamicRoutes(state.asyncRoutes || []), ...asyncRoutes]
   })
   // 获取菜单

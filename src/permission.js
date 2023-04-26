@@ -45,6 +45,7 @@ router.beforeEach(async (to) => {
     }
   } else {
     await store.getMenus()
+    console.log(store.generateRoutes)
     if (store.generateRoutes.length > 0) {
       store.generateRoutes.forEach((route) => {
         router.addRoute(route.name, route)
