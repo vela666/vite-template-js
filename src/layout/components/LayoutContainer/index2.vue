@@ -13,6 +13,6 @@
 <style lang="scss" scoped>
 .layout-container {
   flex-grow: 1;
-  padding: 20px;
+  padding: 0 36px;
 }
 </style>

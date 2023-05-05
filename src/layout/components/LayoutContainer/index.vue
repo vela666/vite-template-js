@@ -4,7 +4,17 @@
       <NavBar />
     </div>
     <div class="layout-container-content">
-      <div>
+      <div class="p20">
+        <router-view #default="{ Component, route }">
+          <transition appear name="fade-transform" mode="out-in">
+            <keep-alive :max="2">
+              <component :is="Component" :key="route.path" />
+            </keep-alive>
+          </transition>
+        </router-view>
+      </div>
+      <!--   内容区滚动，其他地方不滚动         -->
+      <!--      <div>
         <el-scrollbar always class="layout-container-content-scroll">
           <div class="p20">
             <router-view #default="{ Component, route }">
@@ -16,7 +26,7 @@
             </router-view>
           </div>
         </el-scrollbar>
-      </div>
+      </div>-->
     </div>
   </section>
 </template>

@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "@floating-ui/dom": "^1.2.6",
-    "axios": "^1.3.6",
+    "@floating-ui/dom": "^1.2.7",
+    "axios": "^1.4.0",
     "dayjs": "^1.11.7",
     "delegate": "^3.2.0",
     "echarts": "^5.4.2",
@@ -39,7 +39,7 @@
     "unplugin-auto-import": "^0.15.3",
     "unplugin-icons": "^0.16.1",
     "unplugin-vue-components": "^0.24.1",
-    "vite": "^4.3.2",
+    "vite": "^4.3.4",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-vue-setup-expand": "^0.1.4"
   }
